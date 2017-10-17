@@ -8,10 +8,10 @@ def index(request):
     request.session['count'] += 1
     random_str = get_random_string(length=14)
     print random_str
-    input = {
+    input_data = {
         "random_str": random_str
     }
-    return render(request, 'random_word/index.html', input)
+    return render(request, 'random_word/index.html', input_data)
 
 def generate(request):
     return redirect('/random_word')
